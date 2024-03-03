@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.Model.Player;
+
 @RestController
 @RequestMapping("players")
 public class MyRestController {
@@ -16,8 +18,8 @@ public class MyRestController {
 		return "Post Method";
 	}
 	@GetMapping
-	public String getData() {
-		return"Get Data";
+	public Player getData() {
+		return new Player(7, "MS Dhoni", "CSK");
 	}
 	@PutMapping
 	public String putData() {
